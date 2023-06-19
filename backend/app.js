@@ -15,7 +15,7 @@ const { PORT = 3000 } = process.env;
 
 const app = express();
 
-app.use(cors()); // This is CORS-enabled for all origins!
+app.use(cors());
 
 mongoose.connect('mongodb://127.0.0.1:27017/mestodb')
   .then(() => {
