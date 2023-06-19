@@ -1,0 +1,13 @@
+.header {
+  margin: 0 auto;
+  max-width: 880px;
+  display: flex;
+  border-bottom: 1px solid rgba(84, 84, 84, 0.7);
+}
+
+@media (max-width: 767px) {
+  .header {
+    max-width: 320px;
+    flex-wrap: wrap;
+  }
+}

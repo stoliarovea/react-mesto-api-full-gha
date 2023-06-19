@@ -1,0 +1,14 @@
+.element__like {
+  padding: 0;
+  width: 22px;
+  height: 19px;
+  margin: 0 auto;
+  background-image: url(../../../images/heart.svg);
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+.element__like:hover {
+  opacity: 0.5;
+}
