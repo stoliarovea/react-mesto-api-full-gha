@@ -5,10 +5,8 @@ import trashCan from '../images/trash-can.svg';
 function Card(props) {
 
     const currentUser = React.useContext(CurrentUserContext);
-    console.log(currentUser)
     const card = props.card;
-    console.log(card)
-    const isOwn = card.owner._id === currentUser._id;
+    const isOwn = card.owner === currentUser._id;
     const isLiked = card.likes.some(i => i._id === currentUser._id);
     const cardLikeButtonClassName = (`element__like ${isLiked && 'element__like_active'}`);
 
