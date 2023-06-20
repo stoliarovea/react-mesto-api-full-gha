@@ -9,7 +9,7 @@
 
 ## Ссылки на проект
 
-IP-адрес 158.160.32.169
+IP 158.160.32.169
 
 Frontend https://stoliarovea.nomoredomains.rocks
 
