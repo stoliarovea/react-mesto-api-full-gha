@@ -67,7 +67,7 @@ function App() {
     if (token) {
       apiAuth.checkToken(token).then((data) => {
         console.log(data)
-        setUserEmail(data.data.email);
+        setUserEmail(data.email);
         setLoggedIn(true);
         navigate('/');
       }).catch((err) => {
