@@ -49,7 +49,6 @@ function App() {
     apiAuth.signIn(email, password).then((data) => {
       if (data.token) {
         localStorage.setItem('token', data.token);
-        console.log(api)
         api._headers.headers.authorization = `Bearer ${localStorage.getItem('token')}`;
         setUserEmail(email);
         setLoggedIn(true);
