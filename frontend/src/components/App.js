@@ -66,6 +66,7 @@ function App() {
     const token = localStorage.getItem('token');
     if (token) {
       apiAuth.checkToken(token).then((data) => {
+        console.log(data)
         setUserEmail(data.data.email);
         setLoggedIn(true);
         navigate('/');
