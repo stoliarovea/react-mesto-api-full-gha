@@ -48,8 +48,8 @@ function App() {
   function handleSignIn(email, password) {
     apiAuth.signIn(email, password).then((data) => {
       if (data.token) {
-        console.log(data.token)
         localStorage.setItem('token', data.token);
+        api.headers.headers.authorization = `Bearer ${localStorage.getItem('token')}`;
         setUserEmail(email);
         setLoggedIn(true);
         navigate('/');
