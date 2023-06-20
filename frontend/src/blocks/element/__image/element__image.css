@@ -1,6 +1,6 @@
 .element__image {
   background-position: center;
-  background-size: auto;
+  background-size: cover;
 }
 
 .element__image:hover {
