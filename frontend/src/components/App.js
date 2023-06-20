@@ -50,7 +50,7 @@ function App() {
       if (data.token) {
         localStorage.setItem('token', data.token);
         console.log(api)
-//        api.headers.headers.authorization = `Bearer ${localStorage.getItem('token')}`;
+        api._headers.headers.authorization = `Bearer ${localStorage.getItem('token')}`;
         setUserEmail(email);
         setLoggedIn(true);
         navigate('/');
