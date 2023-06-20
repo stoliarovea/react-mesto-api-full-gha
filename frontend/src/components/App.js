@@ -1,6 +1,6 @@
 import '../index.css';
 import React from 'react';
-import { Routes, Route, Link, useNavigate } from 'react-router-dom';
+import { Routes, Route, useNavigate } from 'react-router-dom';
 import Header from './Header';
 import ProtectedRouteElement from './ProtectedRoute';
 import Register from './Register';
@@ -152,7 +152,7 @@ function App() {
 
   React.useEffect(() => {
     checkToken();
-  }, []);
+  }, [checkToken]);
 
   React.useEffect(() => {
     if (loggedIn) {
