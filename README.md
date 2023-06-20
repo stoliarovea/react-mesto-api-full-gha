@@ -5,12 +5,12 @@
   
 Пожалуйста, прикрепите в это описание ссылку на сайт, размещенный на Яндекс.Облаке.
 
-Адрес репозитория: https://github.com/...
+Адрес репозитория: https://github.com/stoliarovea/react-mesto-api-full-gha
 
 ## Ссылки на проект
 
-IP-адрес x.x.x.x
+IP-адрес 158.160.32.169
 
-Frontend https://...
+Frontend https://stoliarovea.nomoredomains.rocks
 
-Backend https://...
+Backend https://api.stoliarovea.nomoredomains.rocks
