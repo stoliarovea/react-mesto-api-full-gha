@@ -89,11 +89,11 @@ class Api {
 }
 
 const api = new Api({
-  baseUrl: 'https://mesto.nomoreparties.co/v1/cohort-61',
+  baseUrl: 'http://api.stoliarovea.nomoredomains.rocks',
   headers: {
     headers: {
-      authorization: 'b3af3ca5-80fb-4b44-8507-14d2a6cdf62f',
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${localStorage.getItem('jwt')}`,
     }
   }
 })
