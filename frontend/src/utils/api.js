@@ -92,7 +92,7 @@ const api = new Api({
   baseUrl: 'http://api.stoliarovea.nomoredomains.rocks',
   headers: {
     headers: {
-      authorization: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDkxOTBjMTY1ZTZiMjczMDQ4MGU4ZjIiLCJpYXQiOjE2ODcyNjM3NjMsImV4cCI6MTY4Nzg2ODU2M30.oQ-iyGdB4AZ2cUGrO-o757TNtYcwu3IVPSsVoIyGOaM',
+      authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDkxOTBjMTY1ZTZiMjczMDQ4MGU4ZjIiLCJpYXQiOjE2ODcyNjM3NjMsImV4cCI6MTY4Nzg2ODU2M30.oQ-iyGdB4AZ2cUGrO-o757TNtYcwu3IVPSsVoIyGOaM',
       'Content-Type': 'application/json',
 //      'Authorization': `Bearer ${localStorage.getItem('token')}`,
     }
