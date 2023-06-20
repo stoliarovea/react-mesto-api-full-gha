@@ -48,7 +48,7 @@ class ApiAuth {
 }
 
 const apiAuth = new ApiAuth({
-  baseUrl: 'http://api.stoliarovea.nomoredomains.rocks'
+  baseUrl: 'https://api.stoliarovea.nomoredomains.rocks'
 })
 
 export default apiAuth;

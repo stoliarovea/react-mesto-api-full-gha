@@ -89,7 +89,7 @@ class Api {
 }
 
 const api = new Api({
-  baseUrl: 'http://api.stoliarovea.nomoredomains.rocks',
+  baseUrl: 'https://api.stoliarovea.nomoredomains.rocks',
   headers: {
     headers: {
       authorization: `Bearer ${localStorage.getItem('token')}`,
