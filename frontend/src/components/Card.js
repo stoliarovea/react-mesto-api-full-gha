@@ -5,6 +5,7 @@ import trashCan from '../images/trash-can.svg';
 function Card(props) {
 
     const currentUser = React.useContext(CurrentUserContext);
+    console.log(currentUser)
     const card = props.card;
     const isOwn = card.owner._id === currentUser._id;
     const isLiked = card.likes.some(i => i._id === currentUser._id);
