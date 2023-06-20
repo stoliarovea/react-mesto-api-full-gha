@@ -48,6 +48,7 @@ function App() {
   function handleSignIn(email, password) {
     apiAuth.signIn(email, password).then((data) => {
       if (data.token) {
+        console.log(data.token)
         localStorage.setItem('token', data.token);
         setUserEmail(email);
         setLoggedIn(true);
@@ -62,7 +63,6 @@ function App() {
   };
 
   function checkToken() {
-    localStorage.getItem('token')
     const token = localStorage.getItem('token');
     if (token) {
       apiAuth.checkToken(token).then((data) => {
