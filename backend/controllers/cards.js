@@ -8,13 +8,7 @@ const getAllCards = (req, res, next) => {
     .then((cards) => {
       res.send(cards);
     })
-    .catch((err) => {
-      if (err.name === 'NotFound') {
-        next(new NotFoundError('Not found'));
-      } else {
-        next(err);
-      }
-    });
+    .catch(next);
 };
 
 const createCard = (req, res, next) => {
@@ -51,7 +45,13 @@ const deleteCard = (req, res, next) => {
         })
         .catch(next);
     })
-    .catch(next);
+    .catch((err) => {
+      if (err.name === 'CastError') {
+        next(new BadRequest('Invalid data'));
+      } else {
+        next(err);
+      }
+    });
 };
 
 const likeCard = (req, res, next) => {
@@ -65,7 +65,11 @@ const likeCard = (req, res, next) => {
     })
     .then((card) => res.send(card))
     .catch((err) => {
-      next(err);
+      if (err.name === 'CastError') {
+        next(new BadRequest('Invalid data'));
+      } else {
+        next(err);
+      }
     });
 };
 
@@ -80,7 +84,11 @@ const dislikeCard = (req, res, next) => {
     })
     .then((card) => res.send(card))
     .catch((err) => {
-      next(err);
+      if (err.name === 'CastError') {
+        next(new BadRequest('Invalid data'));
+      } else {
+        next(err);
+      }
     });
 };
 

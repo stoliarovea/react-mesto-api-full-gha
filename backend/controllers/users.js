@@ -22,7 +22,13 @@ const getUserById = (req, res, next) => {
     .then((user) => {
       res.send(user);
     })
-    .catch(next);
+    .catch((err) => {
+      if (err.name === 'CastError') {
+        next(new BadRequest('Invalid data'));
+      } else {
+        next(err);
+      }
+    });
 };
 
 const getUserInfo = (req, res, next) => {
@@ -31,9 +37,6 @@ const getUserInfo = (req, res, next) => {
       throw new NotFoundError('Not found');
     })
     .then((user) => {
-      if (!user) {
-        throw new NotFoundError('Not found');
-      }
       res.send(user);
     })
     .catch(next);
@@ -53,8 +56,7 @@ const createUser = (req, res, next) => {
     .catch((err) => {
       if (err.code === 11000) {
         next(new Conflict('Email already registered'));
-      }
-      if (err.name === 'ValidationError') {
+      } else if (err.name === 'ValidationError') {
         next(new BadRequest('Invalid data'));
       } else {
         next(err);
