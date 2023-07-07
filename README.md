@@ -14,3 +14,9 @@ IP 158.160.32.169
 Frontend https://stoliarovea.nomoredomains.rocks
 
 Backend https://api.stoliarovea.nomoredomains.rocks
+
+
+
+![Uploading 1.PNG…]()
+![Uploading 2.PNG…]()
+![3](https://github.com/stoliarovea/react-mesto-api-full-gha/assets/31337724/c1e3de97-6816-4c77-bd61-7ffba4d4d9fa)
